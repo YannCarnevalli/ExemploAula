@@ -14,17 +14,25 @@ namespace ExemploAula
 
         private void btnLogar_Click(object sender, EventArgs e)
         {
-            if (txtUsuario.Text == "admin" && txtSenha.Text == "123456") {
+            if (txtUsuario.Text == "admin" && txtSenha.Text == "123456")
+            {
                 MessageBox.Show("Login realizado com sucesso!!");
                 frmMenu menu = new frmMenu();
                 Hide();
                 menu.Show();
             }
-            else {
+            else
+            {
                 MessageBox.Show("Usuário ou Senha incorretos");
                 txtUsuario.Clear();
                 txtSenha.Clear();
-                txtUsuario.Focus();            }
+                txtUsuario.Focus();
+            }
+        }
+
+        private void tsmiSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
